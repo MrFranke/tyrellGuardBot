@@ -13,3 +13,10 @@ export const template: Template = (strings, ...exps) => {
     }, [strings[0]]).join('');
   };
 };
+
+
+export const HRindex = (idx: number): number => idx + 1;
+export const withUpdateSessionStep = wrapped => ctx => {
+  ctx.session.step++;
+  wrapped(ctx);
+};

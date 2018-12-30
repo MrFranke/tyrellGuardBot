@@ -8,12 +8,7 @@ type Step = {
   buttons?: Button[];
 }
 
-const createKeyboard = (buttons: Button[]) =>
-  Markup.inlineKeyboard(
-    buttons.map((btn, idx) =>
-      Markup.callbackButton(btn.text, `test_${idx}`)
-    )
-  );
+const createKeyboard = (buttons) => Markup.inlineKeyboard(buttons);
 
 export const step = ({title, body, buttons = []}: Step) =>
   async (ctx: ContextMessageUpdate) => {
