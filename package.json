@@ -11,6 +11,7 @@
     "build-ts": "tsc"
   },
   "dependencies": {
-    "telegraf": "^3.25.5"
+    "telegraf": "^3.25.5",
+    "typescript": "^3.2.2"
   }
 }
